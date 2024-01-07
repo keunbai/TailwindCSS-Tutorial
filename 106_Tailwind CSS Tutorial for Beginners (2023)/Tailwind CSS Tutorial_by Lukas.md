@@ -28,7 +28,8 @@ Ref) &nbsp;https://tailwindcss.com/docs/installation/framework-guides &nbsp; &nb
 
 &nbsp;1. &nbsp;<span style="color:orange"><b>Install Tailwind CSS
 </b></span>  
-&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;`npm install -D tailwindcss postcss autoprefixer`  
+&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;[npm] &nbsp;`npm install -D tailwindcss postcss autoprefixer`  
+&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;[yarn] &nbsp;`npx yarn add tailwindcss postcss autoprefixer -D`  
 
 
 
@@ -68,9 +69,9 @@ module.exports = {
 
 <br />
 
-&nbsp;4. &nbsp;<span style="color:orange"><b>`src/index.js` 수정</b></span>  
+&nbsp;4. &nbsp;<span style="color:orange"><b>[CRA] `src/index.js` or [Vite] `src/main.jsx` 수정</b></span>  
 &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;CRA는 웹팩 설정되어 있기에 `index.css` 사용하지 않고, 별도의 CSS 파일(`src/tailwind.css` 등) 작성 후  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `index.js` 에서 import 로 이용 가능  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `index.js`/`main.jsx` 에서 import 로 이용 가능  
 &nbsp; &nbsp; &nbsp; &nbsp;※ &nbsp;https://velog.io/@jun_53/Tailwind-CSS-%EC%86%8C%EA%B0%9C-%EB%B0%8F-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-with-React  
 
 
@@ -93,7 +94,12 @@ root.render(
 <br />
 
 &nbsp;5. &nbsp;<span style="color:orange"><b>개발자 모드로 `prettier`, `prettier-plugin-tailwindcss` 패키지 설치</b></span>  
-&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;`npm i -D prettier prettier-plugin-tailwindcss`  
+&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;[npm] &nbsp;`npm i -D prettier prettier-plugin-tailwindcss`  
+&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;[yarn] &nbsp;`npx yarn add prettier prettier-plugin-tailwindcss -D`  
+
+<br />
+
+&nbsp;※. &nbsp; Vite 이용 시 `postcss.config.js` &nbsp; &rarr; &nbsp;`postcss.config.cjs` 변경
 
 <br />
 
