@@ -9,12 +9,12 @@ Ref) &nbsp;https://tailwindcss.com/docs/installation/framework-guides &nbsp; &nb
 
 <br />
 
-### <u>Chap. 1 &nbsp;**SetUp**</u>
+### <u>Step. 1 &nbsp;**SetUp**</u>
 
 <br />
 
 &nbsp;<span style="color:orange"><b>사전 준비 #1</b></span>  
-&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;React 프로젝트 기본 폴더 구성
+&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;React 프로젝트 기본 폴더 구성 (<span style="color:cyan">**Vite+yarn 추천**</span>)
 
 &nbsp;<span style="color:orange"><b>사전 준비 #2</b></span>  
 &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;Extension 설치  
@@ -103,7 +103,7 @@ root.render(
 
 <br />
 
-### <u>Chap. 2 &nbsp;**App 구현**</u>
+### <u>Step. 2 &nbsp;**App 구현**</u>
 
 <br />
 
@@ -157,7 +157,7 @@ export default App;
 
 <br />
 
-### <u>**Chap. 3**</u>  
+### <u>**Step. 3**</u>  
 https://jforj.tistory.com/335
 
 <br />
