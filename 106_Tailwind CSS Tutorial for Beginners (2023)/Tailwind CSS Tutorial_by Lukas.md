@@ -9,7 +9,7 @@ Ref) &nbsp;https://tailwindcss.com/docs/installation/framework-guides &nbsp; &nb
 
 <br />
 
-### <u>Step. 1 &nbsp;**SetUp**</u>
+### Step 1 &nbsp;<u>**SetUp**</u>
 
 <br />
 
@@ -72,7 +72,7 @@ module.exports = {
 &nbsp;4. &nbsp;<span style="color:orange"><b>[CRA] `src/index.js` or [Vite] `src/main.jsx` 수정</b></span>  
 &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;CRA는 웹팩 설정되어 있기에 `index.css` 사용하지 않고, 별도의 CSS 파일(`src/tailwind.css` 등) 작성 후  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `index.js`/`main.jsx` 에서 import 로 이용 가능  
-&nbsp; &nbsp; &nbsp; &nbsp;※ &nbsp;https://velog.io/@jun_53/Tailwind-CSS-%EC%86%8C%EA%B0%9C-%EB%B0%8F-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-with-React  
+&nbsp; &nbsp; &nbsp; &nbsp;Ref) &nbsp;https://velog.io/@jun_53/Tailwind-CSS-%EC%86%8C%EA%B0%9C-%EB%B0%8F-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-with-React  
 
 
 ```js
@@ -99,11 +99,11 @@ root.render(
 
 <br />
 
-&nbsp;※. &nbsp; Vite 이용 시 `postcss.config.js` &nbsp; &rarr; &nbsp;`postcss.config.cjs` 변경
+&nbsp;※ &nbsp;Vite 이용 시 `postcss.config.js` &nbsp; &rarr; &nbsp;`postcss.config.cjs` 변경
 
 <br />
 
-### <u>Step. 2 &nbsp;**App 구현**</u>
+### Step 2 &nbsp;<u>**App 구현**</u>
 
 <br />
 
@@ -131,9 +131,9 @@ export default App;
 <br />
 
 &nbsp;7. &nbsp;<span style="color:orange"><b>Responsive Design App</b></span>  
-&nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;https://tailwindcss.com/docs/responsive-design  
 &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;사례) 기본 padding 값 설정 이후 breakpoints 에 따른 차별화된 padding 값 할당  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;※ &nbsp;DevTool 시각화 창에서 padding 변경 확인  
+&nbsp; &nbsp; &nbsp; &nbsp; Ref) &nbsp;https://tailwindcss.com/docs/responsive-design  
 
 ```js
 // src/App.js
@@ -157,8 +157,8 @@ export default App;
 
 <br />
 
-### <u>**Step. 3**</u>  
-https://jforj.tistory.com/335
+### Step 3 &nbsp;<u>**Customization**</u> 
+Ref) https://jforj.tistory.com/335
 
 <br />
 

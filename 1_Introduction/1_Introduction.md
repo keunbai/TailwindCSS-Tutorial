@@ -15,7 +15,8 @@ Ref) &nbsp;https://itchallenger.tistory.com/entry/Tailwind-CSS-%EA%B0%84%EB%8B%A
 &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;Extension 설치  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ① &nbsp;`live server` extension 설치 후 `full reload` setting 항목 활성화  
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ② &nbsp;`Tailwind CSS IntelliSense` 설치  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ③ &nbsp;`Inline fold` 설치
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ③ &nbsp;`Inline fold` 설치  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ④ &nbsp;`Tailwind Docs` 설치
 
 &nbsp; &nbsp; &nbsp; &nbsp;※ &nbsp;`Tailwind CSS IntelliSense` 적용으로 클래스 이름 위 마우스 위치 시 CSS 내용 확인 가능  
 

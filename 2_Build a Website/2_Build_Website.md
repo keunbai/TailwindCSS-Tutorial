@@ -4,7 +4,7 @@ Ref) &nbsp;https://tailwindcomponents.com/cheatsheet/ &nbsp; &nbsp; &larr; &nbsp
 
 <br />
 
-### <span style="color:cyan"><b>어쩌고 저쩌고</b></span>
+### <span style="color:cyan"><b>HTML + Tailwind CSS 웹사이트 구축 프로젝트</b></span>
  
 <br />
 
@@ -98,15 +98,17 @@ module.exports = {
 <br />
 
 ### <u>Step. 2 &nbsp;**App 구현**</u>
+- <span style="color:orange">`<header>` 구현</span>
+- <span style="color:orange">`<main>` 內 `<section>` 'hero' 와 'rockets' (nav bar 메뉴 中 `Our Rockets` 메뉴) 구현</span>
 
 <br />
 
-&nbsp;5. &nbsp;`style.css`, `index.html` 생성</br></span>  
+&nbsp;1. &nbsp;`style.css`, `index.html` 생성</br></span>  
 &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;`npm run tailwind` &nbsp; &rarr; &nbsp;`style.css`  
 &nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;`index.html` 생성 및 `style.css` 포함  
 
 ```html
-<!-- build/index.html -->
+<!-- build/index_head.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -124,28 +126,22 @@ module.exports = {
 
 <br />
 
-&nbsp;6. &nbsp;<span style="color:orange"><b>기본 App</b></span>  
-&nbsp; &nbsp; &nbsp; &nbsp;- &nbsp;`index.html` 수정  
-
-&nbsp; &nbsp; &nbsp; &nbsp;①  &nbsp;<span style="color:orange">`<header>` 및 내부 tag Tailwind CSS 클래스 설정</span>  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp;`:emojisense` extension 또는 `emojipedia.org` 에서 이모지 확보 및 적용  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- 여기선 웹사이트 內 'rocket' 검색 후 복/붙  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp;`<a>`(anchor tag) 설정 시 tailwind CSS 에 의해 밑줄 자동 제거  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp;hamberger 버튼 설정  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- https://symbl.cc/en/ 에서 'hamberger' 로 검색  
+&nbsp;2. &nbsp;<span style="color:orange"><b>`<header>` 및 내부 요소 Tailwind CSS 클래스 설정</b></span>  
+&nbsp; &nbsp; &nbsp; &nbsp;① &nbsp;`:emojisense` extension 또는 `emojipedia.org` 에서 이모지 확보 및 적용  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;여기선 웹사이트 內 'rocket' 검색 후 복/붙  
+&nbsp; &nbsp; &nbsp; &nbsp;② &nbsp;`<a>`(anchor tag) 설정 시 tailwind CSS 에 의해 밑줄 자동 제거  
+&nbsp; &nbsp; &nbsp; &nbsp;③ &nbsp;hamberger 버튼 설정  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - https://symbl.cc/en/ 에서 'hamberger' 로 검색  
 
 
 
 ```html
-<!-- build/index.html -->
+<!-- build/index_header.html -->
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acme Rockets</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- ... -->
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header class="bg-teal-700 text-white sticky top-0 z-10">
@@ -174,22 +170,29 @@ module.exports = {
 
 <br />
 
-&nbsp; &nbsp; &nbsp; &nbsp;②  &nbsp;<span style="color:orange">`<main>` 및 내부 tag Tailwind CSS 클래스 설정</span>  
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: &nbsp;
+&nbsp;3. &nbsp;<span style="color:orange"><b>`<main>` 및 내부 요소 Tailwind CSS 클래스 설정 #1</b></span>  
+&nbsp; &nbsp; &nbsp; &nbsp;① &nbsp;`<section>` 'hero' 와 'rockets' (nav bar 메뉴 中 `Our Rockets` 메뉴) 구현  
+&nbsp; &nbsp; &nbsp; &nbsp;② &nbsp;앱 內에서 Dark mode 구현  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;`<body class="bg-slate-50 dark:bg-black dark:text-white">`  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;앱의 기본 배경색은 `bg-slate-50`  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;[윈도우 배경색 '라이트' 설정] &nbsp;앱의 기본 배경색은 `bg-slate-50`  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;[윈도우 배경색 '다크' 설정] &nbsp;`dark:bg-black dark:text-white` 미디어 쿼리 적용  
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ※ &nbsp;<span style="color:red">윈도우 배경색 '다크' 전제로 앱 색깔 구성중 &nbsp; &rarr; &nbsp; '라이트' 설정 시 UI 일부 요소 인식 어려움</span>  
+&nbsp; &nbsp; &nbsp; &nbsp;③ &nbsp;nav bar 內 앵커 테그 메뉴 클릭 시 자연스러운 화면 이동 구현  
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - &nbsp;`<html class="sm:scroll-smooth">`  
+
 
 ```html
-<!-- build/index.html -->
+<!-- build/index_hero.html -->
 
 <!doctype html>
 <html lang="en" class="sm:scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acme Rockets</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- ... -->
   </head>
-  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-    <header class="bg-teal-700 text-white sticky top-0 z-10">
+  <body>
+    <header>
       <!-- ... -->
     </header>
     <main class="max-w-4xl mx-auto">
@@ -221,39 +224,37 @@ module.exports = {
             <p class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400">$</p>
             <p class="sm:hidden mt-2 text-2xl text-center text-slate-500 dark:text-slate-400">Affordable Exploration</p>
           </li>
-          <li class="w-2/3 sm:w-5/6 border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black rounded-3xl shadow-xl px-2 py-6 flex flex-col items-center">
-            <img class="w-1/2 mb-6" src="./img/rocketride.png" alt="Adventurer">
-            <h3 class="text-3xl text-center text-slate-900 dark:text-white">Adventurer</h3>
-            <p class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400">$$</p>
-            <p class="sm:hidden mt-2 text-2xl text-center text-slate-500 dark:text-slate-400">Best Selling Rocket!</p>
+          <li>
+            <img src="./img/rocketride.png" alt="Adventurer">
+            <h3>Adventurer</h3>
+            <p>$$</p>
+            <p>Best Selling Rocket!</p>
           </li>
-          <li class="w-2/3 sm:w-5/6 border border-solid border-slate-900 dark:border-gray-100 bg-white dark:bg-black rounded-3xl shadow-xl px-2 py-6 flex flex-col items-center">
-            <img class="w-1/2 mb-6" src="./img/rocketlaunch.png" alt="Infinity">
-            <h3 class="text-3xl text-center text-slate-900 dark:text-white">Infinity</h3>
-            <p class="hidden sm:block mt-2 text-3xl text-center text-slate-500 dark:text-slate-400">$$$</p>
-            <p class="sm:hidden mt-2 text-2xl text-center text-slate-500 dark:text-slate-400">Luxury Starship</p>
+          <li>
+            <img src="./img/rocketlaunch.png" alt="Infinity">
+            <h3>Infinity</h3>
+            <p>$$$</p>
+            <p>Luxury Starship</p>
           </li>
         </ul>
       </section>
 
-      <hr class="w-1/2 mx-auto bg-black dark:bg-white">
+      <hr>
 
-      <section id="testimonials" class="my-12 p-6">
-        <h2 class="mb-6 font-bold text-4xl text-center text-slate-900 dark:text-white sm:text-5xl">
+      <section id="testimonials">
+        <h2>
           Testimonials
         </h2>
       </section>
 
-      <hr class="w-1/2 mx-auto bg-black dark:bg-white">      
+      <hr>      
 
-      <section id="contact" class="my-12 p-6">
-        <h2 class="mb-6 font-bold text-4xl text-center text-slate-900 dark:text-white sm:text-5xl">
+      <section id="contact">
+        <h2>
           Contact us
         </h2>
       </section>
     </main>
-
-    <hr class="w-1/2 mx-auto bg-black dark:bg-white">
   </body>
 </html>
 ```
